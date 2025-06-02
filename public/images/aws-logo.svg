@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" width="120" height="80">
+  <!-- AWS background with gradient -->
+  <defs>
+    <linearGradient id="awsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#232F3E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161E2D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="120" height="80" fill="url(#awsGradient)" rx="8"/>
+  
+  <!-- AWS text in official font style -->
+  <text x="60" y="32" font-family="Amazon Ember, Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#FF9900">AWS</text>
+  
+  <!-- AWS smile/arrow in orange -->
+  <path d="M30 45 Q60 58 90 45" stroke="#FF9900" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Arrow tip -->
+  <polygon points="90,45 85,42 85,48" fill="#FF9900"/>
+  
+  <!-- Certified text -->
+  <text x="60" y="62" font-family="Amazon Ember, Arial, sans-serif" font-size="8" text-anchor="middle" fill="#FFFFFF">CERTIFIED</text>
+  <text x="60" y="72" font-family="Amazon Ember, Arial, sans-serif" font-size="6" text-anchor="middle" fill="#FF9900">Cloud Practitioner</text>
+</svg>
