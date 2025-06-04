@@ -1,0 +1,97 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources << /Font << /F1 5 0 R /F2 6 0 R >> >>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 850
+>>
+stream
+BT
+% Title
+/F1 36 Tf
+50 720 Td
+0 0 0 rg
+(AWS Certified Cloud Practitioner) Tj
+
+% Description
+0 -80 Td
+/F2 18 Tf
+(This certificate validates cloud fluency and foundational AWS knowledge) Tj
+
+% Certificate ID
+0 -60 Td
+/F2 16 Tf
+(Certificate ID: CCP-123456789) Tj
+
+% Issue Date
+0 -40 Td
+/F2 16 Tf
+(Issued: June 1, 2025) Tj
+
+% AWS Logo area placeholder
+0 -100 Td
+/F2 14 Tf
+(Amazon Web Services) Tj
+
+% Certification level
+0 -40 Td
+/F2 12 Tf
+(FOUNDATIONAL LEVEL) Tj
+
+% Valid until
+0 -40 Td
+/F2 12 Tf
+(Valid until: June 1, 2028) Tj
+
+% Footer
+0 -80 Td
+/F2 10 Tf
+0.5 0.5 0.5 rg
+(This certificate is awarded to demonstrate cloud computing knowledge) Tj
+0 -20 Td
+(and understanding of core AWS services, security, architecture,) Tj
+0 -20 Td
+(pricing and support.) Tj
+
+ET
+endstream
+endobj
+
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+
+xref
+0 7
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000110 00000 n 
+0000000271 00000 n 
+0000001173 00000 n 
+0000001237 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1298
+%%EOF

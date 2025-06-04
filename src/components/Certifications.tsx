@@ -66,39 +66,17 @@ const certifications: Certification[] = [
   }
 ]
 
-const Certifications = () => {
-  const [selectedCert, setSelectedCert] = useState<Certification | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const [pdfLoadAttempted, setPdfLoadAttempted] = useState(false)
+const Certifications = () => {  const [selectedCert, setSelectedCert] = useState<Certification | null>(null)
 
   const closeModal = useCallback(() => {
     setSelectedCert(null)
-    setIsLoading(false)
-    setError(null)
-    setPdfLoadAttempted(false)
     document.body.style.overflow = 'auto'
   }, [])
 
   const openModal = useCallback((cert: Certification) => {
     if (!cert.certificate) return
     setSelectedCert(cert)
-    setIsLoading(true)
-    setError(null)
-    setPdfLoadAttempted(false)
     document.body.style.overflow = 'hidden'
-  }, [])
-
-  const handlePdfLoad = useCallback(() => {
-    setIsLoading(false)
-    setError(null)
-    setPdfLoadAttempted(true)
-  }, [])
-
-  const handlePdfError = useCallback(() => {
-    setIsLoading(false)
-    setPdfLoadAttempted(true)
-    setError('Failed to load the PDF. Please try opening it in a new tab or downloading it.')
   }, [])
 
   useEffect(() => {

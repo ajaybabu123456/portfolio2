@@ -10,8 +10,7 @@ interface Particle {
   size: string;
 }
 
-const AnimatedBackground = () => {
-  const particles = useMemo(() => {
+const AnimatedBackground = () => {  const particles = useMemo<Particle[]>(() => {
     return Array.from({ length: 20 }, (_, i) => ({
       id: i,
       x: `${Math.random() * 100}%`,

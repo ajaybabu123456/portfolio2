@@ -8,14 +8,17 @@ export default defineConfig({
   server: {
     fs: {
       allow: ['..']
-    },
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Content-Disposition': 'inline',
-      'Cache-Control': 'no-cache'
     }
   },
-  optimizeDeps: {
-    exclude: ['@react-pdf-viewer/core']
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'framer-motion']
+        }
+      }
+    }
   }
 })

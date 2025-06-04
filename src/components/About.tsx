@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiAward, FiBookOpen, FiTrendingUp, FiUsers } from 'react-icons/fi'
+import { FiAward, FiBookOpen, FiUsers } from 'react-icons/fi'
 
 const About = () => {
   return (
