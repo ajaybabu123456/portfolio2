@@ -65,6 +65,90 @@ html.dark {
     mask-composite: exclude;
     animation: rotate 4s linear infinite;
   }
+  /* Kinetic Typography Styles */
+  .kinetic-name-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  .kinetic-letter {
+    color: #3b82f6;
+    cursor: pointer;
+    position: relative;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+
+  .kinetic-letter::after {
+    content: attr(data-letter);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: rgba(59, 130, 246, 0.1);
+    transform: translateZ(-10px) scale(1.1);
+  }
+
+  /* Name Animation Styles */
+  .animated-name {
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: nameGradient 4s ease-in-out infinite, float 3s ease-in-out infinite;
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  .typewriter-name {
+    overflow: hidden;
+    border-right: 3px solid #3b82f6;
+    white-space: nowrap;
+    animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+  }
+
+  .fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .bounce-name {
+    animation: bounceIn 1.2s ease-out;
+  }
+
+  .floating-name {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .glowing-name {
+    text-shadow: 
+      0 0 5px rgba(59, 130, 246, 0.5),
+      0 0 10px rgba(59, 130, 246, 0.5),
+      0 0 15px rgba(59, 130, 246, 0.5),
+      0 0 20px rgba(59, 130, 246, 0.3);
+    animation: pulse 2s ease-in-out infinite alternate;
+  }
+
+  .rainbow-name {
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff8000,
+      #ffff00,
+      #80ff00,
+      #00ff00,
+      #00ff80,
+      #00ffff,
+      #0080ff,
+      #0000ff,
+      #8000ff,
+      #ff00ff,
+      #ff0080
+    );
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow 5s ease-in-out infinite;
+  }
 }
 
 @keyframes gradient {
@@ -86,80 +170,6 @@ html.dark {
   to {
     transform: rotate(360deg);
   }
-}
-
-@layer utilities {
-  .bg-grid-pattern {
-    background-image: linear-gradient(to right, #64FFDA20 1px, transparent 1px),
-                      linear-gradient(to bottom, #64FFDA20 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
-
-  .text-glow {
-    text-shadow: 0 0 10px #64FFDA40;
-  }
-
-  .hover-glow {
-    @apply transition-all duration-300;
-  }
-  
-  .hover-glow:hover {
-    box-shadow: 0 0 20px #64FFDA40;
-    transform: translateY(-2px);
-  }
-
-  .glass-effect {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20;
-  }
-
-  .gradient-border {
-    position: relative;
-    border-radius: theme('borderRadius.lg');
-  }
-
-  .gradient-border::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(45deg, #64FFDA, #0A192F);
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
-    mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
-}
-
-/* Modal Styles */
-.ReactModal__Overlay {
-  opacity: 0;
-  transition: opacity 200ms ease-in-out;
-}
-
-.ReactModal__Overlay--after-open {
-  opacity: 1;
-}
-
-.ReactModal__Overlay--before-close {
-  opacity: 0;
-}
-
-.ReactModal__Content {
-  transform: scale(0.8);
-  transition: transform 200ms ease-in-out;
-}
-
-.ReactModal__Content--after-open {
-  transform: scale(1);
-}
-
-.ReactModal__Content--before-close {
-  transform: scale(0.8);
 }
 
 :root {
@@ -185,4 +195,149 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: theme('colors.secondary');
+  }
+}
+
+@keyframes nameGradient {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, #64FFDA20 1px, transparent 1px),
+                      linear-gradient(to bottom, #64FFDA20 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px #64FFDA40;
+  }
+
+  .hover-glow {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .gradient-border {
+    position: relative;
+    border-radius: theme('borderRadius.lg');
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(45deg, #64FFDA, #0A192F);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
 }
