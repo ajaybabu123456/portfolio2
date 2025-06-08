@@ -76,7 +76,7 @@ const Hero = () => {
             className="max-w-2xl mx-auto lg:mx-0 text-lg text-gray-600 dark:text-textSecondary"
           >
             B.Tech CSE graduate (CGPA 9.14/10) with expertise in Java, Python, MERN stack, and
-            cloud technologies. Certified by Red Hat & Oracle, passionate about building AI-driven,
+            cloud technologies. Certified by AWS, Red Hat & Oracle, passionate about building AI-driven,
             scalable solutions that make a difference.
           </motion.p>
 

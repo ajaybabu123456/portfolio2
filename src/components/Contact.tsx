@@ -119,6 +119,19 @@ const Contact = () => {
                 </motion.a>
                 
                 <motion.a 
+                  href="mailto:2200031349cseh@gmail.com"
+                  className="flex items-center space-x-4 hover-glow p-4 rounded-lg cursor-pointer"
+                  whileHover={{ x: 10 }}
+                >
+                  <div className="p-3 bg-secondary/10 rounded-full">
+                    <FiMail className="w-6 h-6 text-secondary" />
+                  </div>
+                  <span className="text-gray-600 dark:text-textSecondary">
+                    2200031349cseh@gmail.com
+                  </span>
+                </motion.a>
+                
+                <motion.a 
                   href="tel:+917386485375"
                   className="flex items-center space-x-4 hover-glow p-4 rounded-lg cursor-pointer"
                   whileHover={{ x: 10 }}
@@ -275,7 +288,7 @@ const Contact = () => {
             <div className="w-20 h-1 bg-secondary mx-auto"></div>
           </div>          <div className="glass-effect p-4 rounded-lg max-w-3xl mx-auto">            <div className="flex justify-center gap-4 mb-4">
               <motion.a
-                href="/resume/Ajay_Babu_Resume.pdf"
+                href="/resume/Ajay_babu_Complete.pdf"
                 download
                 className="flex items-center space-x-2 bg-secondary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors"
                 whileHover={{ scale: 1.05 }}
@@ -285,7 +298,7 @@ const Contact = () => {
                 <span>Download Resume</span>
               </motion.a>
               <motion.a
-                href="/resume/Ajay_Babu_Resume.pdf"
+                href="/resume/Ajay_babu_Complete.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-gray-600 dark:bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors"
@@ -299,10 +312,10 @@ const Contact = () => {
 
             <div 
               className="w-full h-[350px] rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-700 cursor-pointer hover:border-secondary transition-colors duration-300"
-              onClick={() => window.open('/resume/Ajay_Babu_Resume.pdf', '_blank')}
+              onClick={() => window.open('/resume/Ajay_babu_Complete.pdf', '_blank')}
             >
               <iframe
-                src="/resume/Ajay_Babu_Resume.pdf"
+                src="/resume/Ajay_babu_Complete.pdf"
                 className="w-full h-full"
                 title="Resume Preview"
               />
