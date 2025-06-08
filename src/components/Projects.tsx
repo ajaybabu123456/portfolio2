@@ -132,23 +132,15 @@ const Projects = () => {
 								</h3>
 								<p className="text-gray-600 dark:text-textSecondary mb-4 line-clamp-2">
 									{project.description}
-								</p>
-								<div className="flex flex-wrap gap-2">
-									{project.tech
-										.slice(0, 3)
-										.map((tech) => (
-											<span
-												key={tech}
-												className="px-3 py-1 text-sm text-secondary bg-secondary/10 rounded-full"
-											>
-												{tech}
-											</span>
-										))}
-									{project.tech.length > 3 && (
-										<span className="px-3 py-1 text-sm text-secondary bg-secondary/10 rounded-full">
-											+{project.tech.length - 3}
+								</p>								<div className="flex flex-wrap gap-2">
+									{project.tech.map((tech) => (
+										<span
+											key={tech}
+											className="px-3 py-1 text-sm text-secondary bg-secondary/10 rounded-full"
+										>
+											{tech}
 										</span>
-									)}
+									))}
 								</div>
 							</div>
 						</motion.div>
